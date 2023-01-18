@@ -1,9 +1,19 @@
-<div class="container shadow-sm mt-5">
 
- <div class="d-flex justify-content-between">
-  <h1 class="title">Liste</h1>
-  <button class="bouton" routerLink="/add">ajouter</button>
- </div>
+<div class="container shadow-sm mt-5">
+    <div class="d-flex justify-content-between">
+        <h1 class="title">Liste</h1>
+        <div class="">
+            <button class="bouton" routerLink="/add">ajouter</button>
+            <button class="btn btn-sm btn-outline-secondary btn-export mx-2"> <i class="fa fa-file-pdf"></i> Exporter
+                PDF</button>
+                <button class="btn btn-sm btn-success btn-export"> <i class=" fa fa-file-excel"></i> Exporter Excel</button>
+
+        </div>
+       </div>
+</div>
+<div class="container shadow-sm mt-2">
+
+ 
 <!-- TABLEAU -->
 <div class="table-responsive">
     <table class="table shadow-sm mt-4">

@@ -12,6 +12,26 @@
   border-radius: 4px;
   font-size: 14px;
 }
+/* .bouton-pdf{
+  border: solid 1px red;
+  padding: 0px 20px;
+  height: 30px;
+
+  border-radius: 4px;
+  color: red;
+  background: white;
+
+}
+
+.bouton-pdf :hover{
+  border: solid 1px red;
+  padding: 0px 20px;
+  border-radius: 4px;
+  color: white;
+  background: red;
+
+} */
+
 
 
 .button-Enregistrer  {
