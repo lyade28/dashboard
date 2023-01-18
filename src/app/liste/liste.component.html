@@ -1,0 +1,63 @@
+<div class="container shadow-sm mt-5">
+
+ <div class="d-flex justify-content-between">
+  <h1 class="title">Liste</h1>
+  <button class="bouton" routerLink="/add">ajouter</button>
+ </div>
+<!-- TABLEAU -->
+<div class="table-responsive">
+    <table class="table shadow-sm mt-4">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Prenom</th>
+                <th scope="col">Nom</th>
+                <th scope="col">Adress</th>
+                <th scope="col">Action</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of tableliste">
+                <td>{{item.id}}</td>
+                <td>{{item.prenom}}</td>
+
+                <td>{{item.nom}}</td>
+                <td>{{item.adress}}</td>
+                <td [width]="'10%'">
+                  <a [routerLink]="[item.id]" title="details">
+                      <span class="fa fa-eye text-black-50 me-2"></span>
+                  </a>
+                  <a  title="expoter pdf">
+                      <span class="fa fa-file-pdf text-danger mx-2"></span>
+                  </a>
+                  <a  title="exporter excel">
+                      <span class="fa fa-file-excel text-success mx-2"></span>
+                  </a>
+
+              </td>
+
+
+            </tr>
+        </tbody>
+
+    </table>
+
+
+</div>
+<div class="d-flex justify-content-between p-2">
+    <div class="d-flex">
+        <span class="me-3">Affichage par</span>
+        <select class="form-select form-select-sm" style="width: auto;height: 30px;" [(ngModel)]="pageSize"
+            (ngModelChange)="refreshMateriels()">
+            <option [ngValue]="5">5</option>
+            <option [ngValue]="10">10</option>
+        </select>
+    </div>
+
+    <ngb-pagination [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize"
+        (pageChange)="refreshMateriels()" style="height: 20px !important;">
+    </ngb-pagination>
+</div>
+
+</div>
